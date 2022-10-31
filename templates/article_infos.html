@@ -1,0 +1,22 @@
+<div class="post-info">
+        <abbr class="published" title="{{ article.date.isoformat() }}">
+                发表与: {{ article.locale_date }}
+        </abbr>
+        {% if article.modified %}
+        <abbr class="modified" title="{{ article.modified.isoformat() }}">
+                更新: {{ article.locale_modified }}
+        </abbr>
+        {% endif %}
+
+        {% if article.authors %}
+        <span class="about">
+                By {% for author in article.authors %}
+                        <a class="url fn" href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
+                {% endfor %}
+        </span>
+        {% endif %}
+<span>In <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>.</span>
+{% include 'taglist.html' %}
+{% import 'translations.html' as translations with context %}
+{{ translations.translations_for(article) }}
+</div><!-- /.post-info -->

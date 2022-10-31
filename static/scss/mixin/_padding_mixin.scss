@@ -1,0 +1,81 @@
+@mixin padding($map, $position) {
+
+    @each $_key in map-keys($map) {
+
+        $width: map-get($map: $map, $key: $_key);
+
+        .#{$_key} {
+            @if $position =="px" {
+                padding-left: $width;
+                padding-right: $width;
+            }
+
+            @else if $position =="py" {
+                padding-top: $width;
+                padding-bottom: $width;
+            }
+
+            @else if $position =="pb" {
+                padding-bottom: $width;
+            }
+
+            @else if $position =="pt" {
+                padding-top: $width;
+            }
+
+            @else if $position =="pl" {
+                padding-left: $width;
+            }
+
+            @else if $position =="pr" {
+                padding-right: $width;
+            }
+
+            @else if $position =="pa" {
+                padding: $width;
+            }
+        }
+    }
+
+}
+
+@mixin margin($map, $position) {
+
+    @each $_key in map-keys($map) {
+
+        $width: map-get($map: $map, $key: $_key);
+
+        .#{$_key} {
+            @if $position =="mx" {
+                margin-left: $width;
+                margin-right: $width;
+            }
+
+            @else if $position =="my" {
+                margin-top: $width;
+                margin-bottom: $width;
+            }
+
+            @else if $position =="mb" {
+                margin-bottom: $width;
+            }
+
+            @else if $position =="mt" {
+                margin-top: $width;
+            }
+
+            @else if $position =="ml" {
+                margin-left: $width;
+            }
+
+            @else if $position =="mr" {
+                margin-right: $width;
+            }
+
+            @else if $position =="ma" {
+                margin: $width;
+            }
+        }
+    }
+
+}

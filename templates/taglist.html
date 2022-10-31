@@ -1,0 +1,7 @@
+{% if article.tags %}
+<span>标签:
+    {% for tag in article.tags %}
+    <span><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag | escape }}</a></span>
+    {% endfor %}
+</span>
+{% endif %}

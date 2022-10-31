@@ -1,0 +1,185 @@
+/*
+	Name: 小土坡 Pelican 主题样式
+	Date: 2022-10-28
+	Version: 1.0
+	Github: https://github.com/xiaotupo-com
+	SiteWeb: https://xiaotupo.com
+*/
+
+/* Imports */
+@import url("variable.css");
+@import url("reset.css");
+@import url("base.css");
+@import url("pygment.css");
+@import url("typogrify.css");
+@import url("fonts.css");
+
+/* Link */
+a,a:hover {
+	text-decoration: none;
+}
+
+a {
+	color: rgba(0, 128, 0, 0.701);
+}
+
+body {
+
+	background: var(--zsf-bg);
+	display: flex;
+	font-size: 14px;
+	flex-direction: column;
+	align-items: center;
+	min-height: 800px;
+	
+}
+
+/* header */
+#header {
+	display: flex;
+	flex-direction: column;
+	background: #fefefe;
+	height: 120px;
+}
+
+ul,li {
+	display: inline;
+}
+
+#logo {
+	font-size: 1.56rem;
+	font-weight: bold;
+}
+
+.container {
+	margin-bottom: 12px;
+	border-bottom: 1px solid var(--zsf-blue-1);
+}
+
+/*
+	页面 main 样式
+*/
+.main {
+	display: flex;
+	flex-direction: row;
+	background: white;
+	padding-top: 30px;
+}
+
+#block-content {
+	flex: 1 1 auto;
+	background: var(--zsf-test-bg2);
+	padding: 10px;
+}
+
+.post-info {
+	padding: 8px 4px;
+}
+
+#block-sidebar {
+	width: 350px;
+	padding: 10px;
+	background: var(--zsf-test-bg1);
+	margin-left: 10px;
+	min-height: 400px;
+}
+
+/* extras */
+#extras {
+	background: white;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	margin-bottom: 28px;
+	height: 268px;
+}
+
+.link-title {
+	border-bottom: 1px solid var(--zsf-blue-1);
+	padding-bottom: 8px;
+	color: rgb(70 66 70 / 85%);
+	margin-bottom: 12px;
+}
+
+.links-item {
+	flex-grow: 1;
+	width: 400px;
+	background: #e1e1de12;
+	margin: 10px;
+	padding: 18px 0px;
+	border-radius: 12px;
+}
+
+/* 除 #footer 外的其他根元素的内边距样式 */
+#header,#main,#extras {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+
+
+/* entry-title */
+.entry-title {
+	font-size: 1.25rem;
+	padding: 8px;
+	border-bottom: 1px solid var(--zsf-blue-1);
+	margin-bottom: 4px;
+}
+/* Footer */
+#footer {
+	background-color: #dfdfca;
+	color: rgba(40, 39, 39, 0.767);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.5rem;
+	padding: 40px 2px;
+	width: 100%;
+}
+
+@media (max-width: 992px) {
+	#main {
+		flex-wrap: wrap;
+	}
+
+	#block-sidebar {
+		flex-grow: 1;
+		margin-left: 0;
+		margin-top: 12px;
+	}
+}
+
+@media (max-width: 576px) or (min-width: 576px) {
+	#header,#extras,#main {
+		width: 100%;
+	}
+}
+
+
+@media (min-width: 768px) {
+	#header,#extras,#main {
+		width: var(--zsf-md);
+	}
+}
+
+@media (min-width: 992px) {
+	#header,#extras,#main {
+		width: var(--zsf-lg);
+	}
+}
+
+
+@media (min-width: 1200px) {
+	#header,#extras,#main {
+		width: var(--zsf-xl);
+	}
+
+}
+
+
+@media (min-width: 1400px) {
+	#header,#extras,#main {
+		width: var(--zsf-xxl);
+	}
+
+}

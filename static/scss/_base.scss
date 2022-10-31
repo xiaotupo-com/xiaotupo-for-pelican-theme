@@ -1,0 +1,15 @@
+
+/* pall padding: top/bottom left/right */
+@include padding($map: $pas, $position: "pa");
+/* px padding: top/bottom */
+@include padding($map: $pxs, $position: "px");
+/* py padding: top/bottom */
+@include padding($map: $pys, $position: "py");
+/* pl padding: top/bottom */
+@include padding($map: $pls, $position: "pl");
+/* pr padding: top/bottom */
+@include padding($map: $prs, $position: "pr");
+/* pt padding: top/bottom */
+@include padding($map: $pts, $position: "pt");
+/* pb padding: top/bottom */
+@include padding($map: $pbs, $position: "pb");

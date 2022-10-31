@@ -1,0 +1,13 @@
+/* padding: n px n px*/
+.pall {
+    padding: var(--zsf-pall);
+}
+
+.px {
+    padding-right: var(--zsf-px);
+    padding-left: var(--zsf-px);
+}
+
+.pb {
+    padding-bottom: var(--zsf-pb);
+}

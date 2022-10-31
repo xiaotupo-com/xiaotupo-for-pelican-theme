@@ -1,0 +1,3 @@
+# 该项目为一个 Pelican 主题
+`Pelican` 是一个 Python 静态博客生成器库，本项目是为 `Pelican` 写的一个主题，名字叫做 `xiaotupo`。
+
