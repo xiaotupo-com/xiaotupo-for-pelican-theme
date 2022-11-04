@@ -1,0 +1,55 @@
+/* header */
+#header {
+	display: flex;
+	flex-direction: column;
+	height: 140px;
+	width: 100%;
+}
+
+
+
+
+// .container 可能在多处使用
+.container {
+	border-bottom: $border-bottom;
+
+	.logo {
+		font-size: 2rem;
+		line-height: 1;
+	}
+
+	.subtitle {
+		font-size: 1rem;
+		color: #aaa;
+	}
+}
+
+nav {
+	background: $nav-bg;
+	ul {
+		
+		padding-inline-start: 0;	
+
+		li {
+			display: inline;
+			font-size: 1.25rem;
+		}
+
+		a {
+			display: inline-block;
+			color: rgb(233, 233, 245);
+			padding: 18px 18px;
+			font-weight: 800;
+
+			&:hover {
+				color: white;
+				background: $link-color;
+			}
+
+		}
+	}
+}
+
+.is-active {
+	background: #1BA6B2;
+}

@@ -1,5 +1,26 @@
 <!-- 网站侧栏 -->
 
-<div class="profile">
-    <h2>头像</h2>
+<div class="profile sidebar-item">
+    <div class="head">
+        <img src="{{ SITEURL}}/{{ THEME_STATIC_DIR }}/images/xiaotupo-logo.svg" title="小土坡"/>
+        
+    </div>
+    <div class="content">
+        <div class="bottom">
+            文章：<span>{{ articles|length }}</span>
+            分类：<span>{{ categories|length }}</span>
+            页面：<span>{{ pages|length }}</span>
+        </div>
+        <a class="github-link" href="{{ GITHUB_URL }}" target="_blank" title="去我的 Github">Github</a>
+    </div>
+    
+</div>
+
+<div class="tags sidebar-item">
+    <h2 class="sidebar-title">标签</h2>
+    <div class="content">
+        {% for tag, _ in tags %}
+            <a class="tag" href="{{ SITEURL }}/{{ tag.url }}" title="{{ tag }}">{{ tag }}</a>
+        {% endfor %}
+    </div>
 </div>

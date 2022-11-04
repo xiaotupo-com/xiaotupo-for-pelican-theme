@@ -1,13 +1,10 @@
 
-    $blue-1: #C8E0E4;
-    $sm: 576px;
-    $md: 768px;
-    $lg: 992px;
-    $xl: 1200px;
-    $xxl: 1400px;
-    $bg: #EDE8E2;
-    $test-bg1: #caa;
-    $test-bg2: rgb(204, 203, 170);
+$blue-1: #C8E0E4;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
 
 $pa-1: 4px !default;
 $pa-2: 8px !default;
@@ -206,3 +203,10 @@ $pbs: (
     "pb-3": $pb-3,
     "pb-4": $pb-4,
 ) !default;
+
+$mb-1: 4px;
+$mb-2: 8px;
+$mb-3: 12px;
+$mb-4: 14px;
+$mb: 18px;
+$border-bottom: 1px solid #ccc;

@@ -13,3 +13,20 @@
 @include padding($map: $pts, $position: "pt");
 /* pb padding: top/bottom */
 @include padding($map: $pbs, $position: "pb");
+
+// 通用 a 链接
+a,a:hover {
+    text-decoration: none;
+}
+
+a {
+    color: $link-color;
+    &:hover {
+        color: $nav-bg;
+    }
+}
+
+::selection {
+    background: #1193d5;
+    color: white;
+}

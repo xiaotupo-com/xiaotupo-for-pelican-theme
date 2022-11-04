@@ -1,0 +1,103 @@
+#sidebar {
+	width: 350px;
+	min-width: 350px;
+	padding: 10px;
+	margin-left: 10px;
+	min-height: 400px;
+
+	.profile {
+		.head {
+			background: #6accd521;
+		}
+
+		img {
+			// transform: scale(0.65);
+
+			&:hover {
+				filter: drop-shadow(0 0 16px #07A081);
+			}
+		}
+
+		.content {
+
+			.github-link {
+				display: block;
+				background: black;
+				padding: 8px 0;
+				color: white;
+				font-size: 1.4rem;
+				font-weight: 800;
+
+				&:hover {
+					filter: drop-shadow(0 0 16px black);
+					font-size: 1.2rem;
+					font-weight: bold;
+				}
+			}
+
+			text-align: center;
+
+			.bottom {
+				background: #1BA6B2;
+				padding: 10px 0;
+				color: white;
+
+				&:hover {
+					filter: drop-shadow(0 0 10px #1BA6B2);
+					font-size: 1.2rem;
+					font-weight: bold;
+				}
+
+				span {
+					color: white;
+					margin-right: 4px;
+					font-weight: 600;
+					font-size: 1.2rem;
+				}
+
+			}
+
+		}
+	}
+
+	.sidebar-item {
+		margin-bottom: 20px;
+
+		.sidebar-title {
+			border-bottom: 1px solid #ccc;
+			padding-bottom: 4px;
+			margin-bottom: 20px;
+			color: #979795;
+			letter-spacing: 0.15rem;
+		}
+
+		.content {
+			min-height: 100px;
+
+		}
+
+	}
+
+	.tags {
+
+		.content {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-around;
+
+			.tag {
+				color: #ffffffb3;
+				display: inline-block;
+				padding: 6px 10px;
+				margin-bottom: 8px;
+				border-radius: 8px;
+				font-size: 1.1rem;
+
+				&:hover {
+					color: white;
+					font-weight: bold;
+				}
+			}
+		}
+	}
+}

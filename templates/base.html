@@ -2,98 +2,119 @@
 <html lang="{% block html_lang %}{{ DEFAULT_LANG }}{% endblock html_lang %}">
 
 <head>
-  {% block head %}
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{% block title %}{{ SITENAME }}{%endblock%}</title>
-  <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/{{ CSS_FILE }}" />
-  <link rel="shortcut icon" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/favicon.ico" type="image/x-icon">
+    {% block head %}
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}{{ SITENAME }}{%endblock%}</title>
+    <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/{{ CSS_FILE }}" />
+    <link rel="shortcut icon" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/highlight/styles/base16/solarized-dark.min.css">
 
-  {% block extra_head %}{% endblock extra_head %}
-  {% endblock head %}
+
+
+    {% block extra_head %}{% endblock extra_head %}
+    {% endblock head %}
 </head>
 
 <body>
-  {% include 'github.html' %}
-  <header id="header" class="body">
+    {% include 'github.html' %}
+    <header id="header" class="body">
     <div class="container">
-      <h1 id="logo" class="pall"><a href="{{ SITEURL }}/">{{ SITENAME }}</a></h1>
-      {% if SITESUBTITLE %} <h2 class="px pb">{{ SITESUBTITLE }}</h2>{%endif %}
+        <h1 id="logo" class="logo px py"><a href="{{ SITEURL }}/">{{ SITENAME }}</a></h1>
+        {% if SITESUBTITLE %} <h2 class=" subtitle px pb">{{ SITESUBTITLE }}</h2>{%endif %}
     </div>
 
     <nav>
-      <ul class="nav-ul">
+        <ul class="nav-ul">
         {% for title, link in MENUITEMS %}
-        <li><a href="{{ link }}">{{ title }}</a></li>
+            <li><a{% if page_name == 'index' %} class="is-active" {% endif %} href="{{ link }}">{{ title }}</a></li>
         {% endfor %}
-        {% if DISPLAY_PAGES_ON_MENU -%}
-        {% for pg in pages %}
-        <li{% if pg==page %} class="active" {% endif %}><a href="{{ SITEURL }}/{{ pg.url }}">{{ pg.title }}</a></li>
-          {% endfor %}
-          {% endif %}
-          {% if DISPLAY_CATEGORIES_ON_MENU -%}
-          {% for cat, null in categories %}
-          <li{% if cat==category %} class="active" {% endif %}><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
+
+        
+        {% if DISPLAY_CATEGORIES_ON_MENU -%}
+            {% for cat, null in categories %}
+                <li><a{% if cat==category %} class="is-active" {% endif %} href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
             {% endfor %}
-            {% endif %}
-      </ul>
+        {% endif %}
+
+        {% if DISPLAY_PAGES_ON_MENU -%}
+            {% for pg in pages %}
+                <li><a{% if pg==page %} class="is-active" {% endif %} href="{{ SITEURL }}/{{ pg.url }}">{{ pg.title }}</a></li>
+            {% endfor %}
+        {% endif %}
+        </ul>
     </nav>
-  </header><!-- /#banner -->
-  {% block content_title %}
+    </header><!-- /#banner -->
+    {% block content_title %}
 
-  {% endblock content_title %}
+    {% endblock content_title %}
 
-  <div id="main" class="main">
+    <div id="main" class="main">
 
-    <section id="block-content" class="content">
-      {% block content %}
-      {% endblock content %}
-    </section>
-    <aside id="block-sidebar">
-      {% block sidebar %}
+        <section id="content">
+        {% block content %}
+        {% endblock content %}
+        </section>
+        <aside id="sidebar">
+        {% block sidebar %}
 
-      {% endblock sidebar %}
-    </aside>
+        {% endblock sidebar %}
+        </aside>
+    </div> <!-- id=main -->
 
-  </div>
-
-  <section id="extras" class="links">
+    <section id="extras" class="links">
     {% if LINKS %}
     <div class="links-item">
-      <h2 class="link-title">{{ LINKS_WIDGET_NAME | default('友情链接') }}</h2>
-      <ul>
+        <h2 class="link-title">{{ LINKS_WIDGET_NAME | default('友情链接') }}</h2>
+        <ul>
         {% for name, link in LINKS %}
         <li><a href="{{ link }}" target="_blank">{{ name }}</a></li>
         {% endfor %}
-      </ul>
+        </ul>
     </div><!-- /.links-item -->
 
     <div class="links-item">
-      <h2 class="link-title">{{ LINKS_WIDGET_NAME | default('热门推荐') }}</h2>
-      <ul>
+        <h2 class="link-title">{{ LINKS_WIDGET_NAME | default('热门推荐') }}</h2>
+        <ul>
         {% for name, link in LINKS %}
         <li><a href="{{ link }}" target="_blank">{{ name }}</a></li>
         {% endfor %}
-      </ul>
+        </ul>
     </div><!-- /.links-item -->
 
     <div class="links-item">
-      <h2 class="link-title">{{ LINKS_WIDGET_NAME | default('下载列表') }}</h2>
-      <ul>
+        <h2 class="link-title">{{ LINKS_WIDGET_NAME | default('下载列表') }}</h2>
+        <ul>
         {% for name, link in LINKS %}
         <li><a href="{{ link }}" target="_blank">{{ name }}</a></li>
         {% endfor %}
-      </ul>
+        </ul>
     </div><!-- /.links-item -->
     {% endif %}
-  </section><!-- /#extras -->
+    </section><!-- /#extras -->
 
-  <footer id="footer">
+    <footer id="footer">
     <p>Copyright © 2022-present <a href="https://xiaotupo.com" target="_blank">小土坡</a> Powered by <a
         href="https://getpelican.com/" target="_blank">Pelican</a> | <a href="https://www.python.org/"
         target="_blank">Python</a></p>
 
-  </footer><!-- /#footer -->
+    </footer><!-- /#footer -->
+
+    <!-- 隐藏侧栏 -->
+    <button type="button" onclick="hideSidebarFunction()" id="hide-sidebar-btn">隐藏侧栏</button>
+
+    <!-- 返回顶部 -->
+    <button type="button" onclick="topFunction()" id="go-top">Top</button>
+
+    <script type="text/javascript"  src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/main.js"></script>
+    <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/highlight/highlight.min.js"></script>
+    <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/highlightjs-line-numbers.min.js"></script>
+    <script>
+    hljs.highlightAll();
+    hljs.initLineNumbersOnLoad();
+    </script>
+
+    
 </body>
 
 </html>

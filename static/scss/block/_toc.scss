@@ -1,0 +1,31 @@
+div.toc {
+    display: block;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background: rgb(204, 220, 204);
+    color: black;
+    line-height: 1.5rem;
+    
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    /* ul ------------------*/
+    ul {
+        display: block;
+        list-style: decimal;
+        padding-inline-start: 25px;
+        li {
+            display: list-item;
+
+            a {
+                padding: 10px 0;
+            }
+        }
+
+        ul {
+            padding-inline-start: 10px;
+        }
+    }
+}
+

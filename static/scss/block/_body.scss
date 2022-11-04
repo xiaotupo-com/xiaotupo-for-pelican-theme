@@ -1,0 +1,23 @@
+body {
+	background: $bg;
+	display: flex;
+	font-size: 14px;
+	font-family: Oxygen, Ubuntu, Cantarell, PingFangSC-light, PingFangTC-light, "Open Sans", "Helvetica Neue", "sans-serif";
+	flex-direction: column;
+	align-items: center;
+}
+
+#logo {
+	a {
+		color: $link-color;
+	}
+}
+
+/*
+	页面 main 样式
+*/
+.main {
+	display: flex;
+	flex-direction: row;
+	padding-top: 30px;
+}

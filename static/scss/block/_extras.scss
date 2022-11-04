@@ -1,0 +1,24 @@
+/* extras */
+#extras {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	margin-bottom: 28px;
+	min-height: 268px;
+}
+
+.link-title {
+	border-bottom: 1px solid $blue-1;
+	padding-bottom: 8px;
+	color: rgb(70 66 70 / 85%);
+	margin-bottom: 12px;
+}
+
+.links-item {
+	flex-grow: 1;
+	width: 400px;
+	background: #e1e1de12;
+	margin: 10px;
+	padding: 18px 0px;
+	border-radius: 12px;
+}

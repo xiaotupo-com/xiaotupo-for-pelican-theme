@@ -3,7 +3,22 @@
 @import "variable";
 @import "./mixin/padding_mixin";
 @import "function";
+// @import "./block/pygment";
 @import "reset";
 @import "base";
+@import "./block/body";
+@import "./block/header";
+@import "./block/breadcrumb";
+@import "./block/content";
+@import "./block/sidebar";
+@import "./block/extras";
+@import "./block/footer";
+@import "./block/toc";
+@import "./block/media";
+@import "./block/go_top";
+@import "table";
+@import "./block/codelight";
+
+
 
 

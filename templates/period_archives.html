@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-<section id="content" class="body">
+
 <h1>Archives for {{ period | reverse | join(' ') }}</h1>
 
 <dl>
@@ -9,5 +9,4 @@
     <dd><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></dd>
 {% endfor %}
 </dl>
-</section>
 {% endblock %}
