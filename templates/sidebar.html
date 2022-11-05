@@ -24,3 +24,21 @@
         {% endfor %}
     </div>
 </div>
+
+<div class="category sidebar-item">
+    <h2 class="sidebar-title">分类</h2>
+    <div class="content">
+        {% for category, _ in categories %}
+            <a class="category-link" href="{{ SITEURL }}/{{ category.url }}" title="{{ category }}" >{{ category }}</a>
+        {% endfor %}
+    </div>
+</div>
+
+<div class="category sidebar-item">
+    <h2 class="sidebar-title">主机推荐</h2>
+    <div class="content">
+        <a href="https://url.cn/RKEtpXPI" title="双十一同价！云服务器等爆品抢先购，低至4.2元/月" target="_blank">
+            <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/txtg/345X200.jpg" />
+        </a>
+    </div>
+</div>

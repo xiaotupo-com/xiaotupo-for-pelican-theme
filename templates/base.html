@@ -4,13 +4,18 @@
 <head>
     {% block head %}
     <meta charset="utf-8" />
+    <meta name="generator" content=""Pelican" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% if page_name == 'index' %}
+    <meta name="description" content="{{ SITE_DESCRIPTION }}" />
+    <meta name="keywords" content="{{ SITE_KEYWORKS }}" />
+    <meta property="og:description" content="{{ SITE_DESCRIPTION }}" />
+    
+    {% endif %}
     <title>{% block title %}{{ SITENAME }}{%endblock%}</title>
     <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/{{ CSS_FILE }}" />
     <link rel="shortcut icon" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/highlight/styles/base16/solarized-dark.min.css">
-
-
 
     {% block extra_head %}{% endblock extra_head %}
     {% endblock head %}
@@ -72,25 +77,7 @@
         {% endfor %}
         </ul>
     </div><!-- /.links-item -->
-
-    <div class="links-item">
-        <h2 class="link-title">{{ LINKS_WIDGET_NAME | default('热门推荐') }}</h2>
-        <ul>
-        {% for name, link in LINKS %}
-        <li><a href="{{ link }}" target="_blank">{{ name }}</a></li>
-        {% endfor %}
-        </ul>
-    </div><!-- /.links-item -->
-
-    <div class="links-item">
-        <h2 class="link-title">{{ LINKS_WIDGET_NAME | default('下载列表') }}</h2>
-        <ul>
-        {% for name, link in LINKS %}
-        <li><a href="{{ link }}" target="_blank">{{ name }}</a></li>
-        {% endfor %}
-        </ul>
-    </div><!-- /.links-item -->
-    {% endif %}
+    {% endif %} <!-- LINKS END! -->
     </section><!-- /#extras -->
 
     <footer id="footer">

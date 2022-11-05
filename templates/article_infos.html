@@ -1,22 +1,22 @@
 <div class="post-info">
         <abbr class="published" title="{{ article.date.isoformat() }}">
-                发表：{{ article.locale_date }}
+                发表: {{ article.locale_date }}
         </abbr>
         {% if article.modified %}
         <abbr class="modified" title="{{ article.modified.isoformat() }}">
-                更新：{{ article.locale_modified }}
+                更新: {{ article.locale_modified }}
         </abbr>
         {% endif %}
 
         {% if article.authors %}
         <span class="about">
-                作者：{% for author in article.authors %}
+                作者: {% for author in article.authors %}
                         <a class="url fn" href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
                 {% endfor %}
         </span>
         {% endif %}
-<span>分类：<a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a></span>
-<span>标签：{% include 'taglist.html' %}</span>
+<span>分类: <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a></span>
+<span>标签: {% include 'taglist.html' %}</span>
 {% import 'translations.html' as translations with context %}
 {{ translations.translations_for(article) }}
 </div><!-- /.post-info -->

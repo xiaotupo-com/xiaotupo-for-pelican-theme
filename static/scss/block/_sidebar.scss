@@ -100,4 +100,31 @@
 			}
 		}
 	}
+
+	.category {
+
+		.content {
+			display: flex;
+			flex-direction: column;
+		}
+
+		.category-link {
+			display: inline-block;
+			background: #A3C159;
+			padding: 12px;
+			border-radius: 5px;
+			text-align: center;
+			font-size: 1.5rem;
+			color: rgb(233, 233, 245);
+			margin-bottom: 0.8rem;
+
+			&:hover {
+				color: white;
+				background: #A3C159;
+				filter: drop-shadow(0 0 10px #1BA6B2);
+				font-weight: bold;
+				background: #1BA6B2;
+			}
+		}
+	}
 }
