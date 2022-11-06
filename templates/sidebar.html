@@ -42,3 +42,14 @@
         </a>
     </div>
 </div>
+
+<div class="sidebar-item">
+    <h2 class="sidebar-title">给我发送Email</h2>
+    <div class="content">
+        {% if article %}
+            <a href="mailto:{{ EMAIL }}&body=文章链接：<a href='{{ SITEURL }}/{{ article.url }}'>{{ article.title }}</a>&subject={{ article.title}}-填写你的主题">给我发消息</a>
+        {% else %}
+        <a href="mailto:{{ EMAIL }}">给我发消息</a>
+        {% endif %}
+    </div>
+</div>

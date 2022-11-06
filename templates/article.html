@@ -47,7 +47,35 @@
     <div class="content">
         {{ article.content|safe }}
     </div><!-- /.entry-content -->
+
+    
 </article>
+
+<!-- 上一片文章/下一片文章👆 -->
+<div class="next-prev-article">
+    {# 判断是否有上下篇文章 #}
+    {% if article.next_article %}
+    <p>
+        <span>下一篇：</span>
+        <a class="next-article" href="{{ SITEURL }}/{{ article.next_article.url }}" title="{{ article.next_article.title }}">{{ article.next_article.title }}</a>
+    </p>
+    
+    {% else %}
+
+    {% endif %}
+
+    {% if article.prev_article %}
+    <p>
+        <span>上一篇：</span>
+        <a class="prev-article" href="{{ SITEURL }}/{{ article.prev_article.url }}" title="{{ article.prev_article.title }}">{{ article.prev_article.title }}</a>
+    </p>
+    
+    {% else %}
+
+    {% endif %}
+</div>
+
+
     
 {% endblock %}
 

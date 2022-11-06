@@ -2,6 +2,7 @@
     flex: 1 1 auto;
     width: calc(100% - 362px);
     background: #f3efd3;
+
     section {
         background: rgb(244, 244, 231);
         margin-bottom: $mb-4;
@@ -53,7 +54,47 @@
 
         }
     }
+
+    .next-prev-article {
+        display: flex;
+        flex-direction: column;
+        background: #fdf6e3;
+        margin-top: 50px;
+
+        // .next-article {
+
+        // }
+
+        // .prev-article {
+            
+        // }
+        p {
+            font-size: 1.25rem;
+            padding: 2px 12px;
+            color: #A3C159;
+
+            a {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .pagination {
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        font-size: 1.5rem;
+        font-weight: bold;
+        li {
+            margin: 0 8px;
+        }
+        li.active a {
+            color: red;
+        }
+    }
 }
+
+// #content
 
 .post-info {
     padding: 4px 0;
@@ -75,11 +116,15 @@
     }
 }
 
-.article, #page{
+// .post-info
+
+.article,
+#page {
     $left: 12px;
     padding: 18px 4px;
 
-    .title, .title {
+    .title,
+    .title {
         font-family: "Trebuchet MS", Arial, "Lucida Grande", Verdana, Lucida, Helvetica, sans-serif;
         line-height: 250%;
         font-weight: 500;
@@ -94,7 +139,7 @@
         p {
             font-size: 1.1rem;
             margin-top: 1rem;
-            margin-bottom: 1rem;
+            margin-bottom: 2rem;
             line-height: 180%;
         }
 
@@ -110,14 +155,17 @@
             font-size: 1.2rem;
         }
 
-        h2,h3,h4 {
+        h2,
+        h3,
+        h4 {
             font-family: "Trebuchet MS", Arial, "Lucida Grande", Verdana, Lucida, Helvetica, sans-serif;
             color: #000000;
             border-bottom: 1px solid #d3d3d3;
             font-weight: 500;
         }
 
-        > table code, p code  {
+        >table code,
+        p code {
             display: inline-block;
             padding-left: 5px;
             padding-right: 5px;
@@ -129,6 +177,10 @@
             line-height: 135%;
         }
 
-        
+
     }
+
+
 }
+
+// .article, #page
