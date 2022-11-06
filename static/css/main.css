@@ -252,6 +252,14 @@ a:hover {
   color: white;
 }
 
+.display-none {
+  display: none;
+}
+
+.display-block {
+  display: block;
+}
+
 body {
   background: #fdf6e3;
   display: flex;
@@ -706,8 +714,8 @@ div.toc ul ul {
 #go-top {
   display: none;
   position: fixed;
-  bottom: 20px;
-  right: 30px;
+  bottom: 36px;
+  right: 0;
   z-index: 99;
   font-size: 18px;
   border: none;
@@ -716,7 +724,6 @@ div.toc ul ul {
   color: white;
   cursor: pointer;
   padding: 15px;
-  border-radius: 4px;
 }
 
 #go-top:hover {
@@ -725,12 +732,14 @@ div.toc ul ul {
 
 #hide-sidebar-btn {
   position: fixed;
-  bottom: calc(50% - 18px);
-  right: 30px;
+  display: none;
+  bottom: 0;
+  right: 0;
   z-index: 99;
   font-size: 18px;
   border: none;
   height: 36px;
+  background: #1BA6B2;
 }
 
 .content > table {

@@ -46,11 +46,33 @@ sidebar_tag.forEach((a) => {
  */
 var hide_sidebar = document.querySelector("#sidebar");
 
+var hide_sidebar_btn = document.querySelector("#hide-sidebar-btn");
+
+
 function hideSidebarFunction() {
     if (hide_sidebar.style.display != "none") {
         hide_sidebar.style.display = "none";
+        hide_sidebar_btn.innerHTML = "显示侧栏";
     } else {
         hide_sidebar.style.display = "block";
+        hide_sidebar_btn.innerHTML = "隐藏侧栏";
+    }
+}
+
+
+
+/**
+ * 屏幕宽度代码
+ */
+window.onresize = function(){
+    if(document.body.clientWidth < 990) {
+        hide_sidebar_btn.style.display = "none";
+        hide_sidebar_btn.innerHTML = "隐藏侧栏"
+        hide_sidebar.style = "";
+    }
+
+    if(document.body.clientWidth > 990) {
+        hide_sidebar_btn.style.display = "block";
     }
 }
 
