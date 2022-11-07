@@ -490,6 +490,42 @@ nav ul a:hover {
   margin: auto 3px;
   line-height: 135%;
 }
+.article .original,
+#page .original {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+.article .original .content,
+#page .original .content {
+  width: 70%;
+  background: #ebe7cb;
+  border-radius: 20px;
+  filter: drop-shadow(0 0 10px #ebe7cb);
+  border-left: 4px solid #c7df88;
+  border-right: 4px solid #c7df88;
+}
+.article .original .content:hover,
+#page .original .content:hover {
+  background: #e1dfce;
+  filter: drop-shadow(0 0 5px #d7e8aa);
+  border-left: 4px solid #b3cf6c;
+  border-right: 4px solid #b3cf6c;
+}
+.article .original .content p,
+#page .original .content p {
+  font-size: 1rem;
+  color: #7c7979;
+  margin: 8px 0;
+}
+.article .original .content a,
+#page .original .content a {
+  color: #7a7171;
+}
+.article .original .content a:hover,
+#page .original .content a:hover {
+  color: #999;
+}
 
 #sidebar {
   width: 350px;
@@ -665,6 +701,19 @@ div.toc ul ul {
   }
   #footer p {
     font-size: 0.8rem;
+  }
+}
+@media (max-width: 768px) {
+  .original .content {
+    width: 85% !important;
+  }
+}
+@media (max-width: 576px) {
+  .original .content {
+    width: 95% !important;
+  }
+  .original .content p {
+    font-size: 0.8rem !important;
   }
 }
 @media (min-width: 768px) {

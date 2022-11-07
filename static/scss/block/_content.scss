@@ -180,6 +180,40 @@
 
     }
 
+    .original {
+        display: flex;
+        justify-content: center;
+        margin-top: 100px;
+
+        .content {
+            width: 70%;
+            background: #ebe7cb;
+            border-radius: 20px;
+            filter: drop-shadow(0 0 10px #ebe7cb);
+            border-left: 4px solid #c7df88;
+            border-right: 4px solid #c7df88;
+
+            &:hover {
+                background: #e1dfce;
+                filter: drop-shadow(0 0 5px #d7e8aa);
+                border-left: 4px solid #b3cf6c;
+                border-right: 4px solid #b3cf6c;
+            }
+
+            p {
+                font-size: 1rem;
+                color: #7c7979;
+                margin: 8px 0;
+            }
+
+            a {
+                color: #7a7171;
+                &:hover {
+                    color: #999;
+                }
+            }
+        }
+    }
 
 }
 

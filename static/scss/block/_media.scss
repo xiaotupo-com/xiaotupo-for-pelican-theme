@@ -12,6 +12,25 @@
 	#footer p {
 		font-size: 0.8rem;
 	}
+
+	
+}
+
+
+@media (max-width: $md) {
+	.original .content {
+		width: 85% !important;
+	}
+}
+
+@media (max-width: $sm) {
+	.original .content {
+		width: 95% !important;
+
+		p {
+			font-size: 0.8rem !important;
+		}
+	}
 }
 
 @media (min-width: $md) {
