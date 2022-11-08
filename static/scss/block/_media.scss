@@ -21,6 +21,14 @@
 	.original .content {
 		width: 85% !important;
 	}
+
+	
+}
+
+@media (max-width: $lg) {
+	#hide-sidebar-btn {
+		display: none !important;
+	}
 }
 
 @media (max-width: $sm) {

@@ -27,14 +27,6 @@
 {# 网站标题 #}
 {% block title %}{{ article.title|striptags }} - {{ SITENAME }}{% endblock %}
 
-{# 向 head 头部添加内容 #}
-{% block extra_head %}
-{% import 'translations.html' as translations with context %}
-{% if translations.entry_hreflang(article) %}
-{{ translations.entry_hreflang(article) }}
-{% endif %}
-{% endblock %}
-
 {% block content %}
 {{ toc|safe }}
 {# 文章详情页 #}
@@ -48,7 +40,14 @@
         {{ article.content|safe }}
     </div><!-- /.entry-content -->
 
-    
+    {% if article.original != "false" %}
+    <div class="original">
+        <div class="content">
+            <p>版权声明：<a href="https://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh" target="_blank">署名-非商业性使用-禁止演绎 3.0</a></p>
+            <p>本文地址：<a href="" target="_blank">{{ SITEURL }}/{{ article.url }}</a></p>
+        </div>
+    </div>
+    {% endif %}
 </article>
 
 <!-- 上一片文章/下一片文章👆 -->
@@ -74,9 +73,6 @@
 
     {% endif %}
 </div>
-
-
-    
 {% endblock %}
 
 {# 侧栏 #}

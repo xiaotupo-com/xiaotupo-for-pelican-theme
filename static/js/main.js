@@ -65,13 +65,13 @@ function hideSidebarFunction() {
  * 屏幕宽度代码
  */
 window.onresize = function(){
-    if(document.body.clientWidth < 990) {
+    if(document.body.clientWidth < 992) {
         hide_sidebar_btn.style.display = "none";
-        hide_sidebar_btn.innerHTML = "隐藏侧栏"
+        hide_sidebar_btn.innerHTML = "隐藏侧栏";
         hide_sidebar.style = "";
     }
 
-    if(document.body.clientWidth > 990) {
+    if(document.body.clientWidth > 992) {
         hide_sidebar_btn.style.display = "block";
     }
 }

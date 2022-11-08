@@ -286,7 +286,7 @@ body {
 #header {
   display: flex;
   flex-direction: column;
-  height: 140px;
+  height: 153px;
   width: 100%;
 }
 
@@ -708,6 +708,11 @@ div.toc ul ul {
     width: 85% !important;
   }
 }
+@media (max-width: 992px) {
+  #hide-sidebar-btn {
+    display: none !important;
+  }
+}
 @media (max-width: 576px) {
   .original .content {
     width: 95% !important;
@@ -781,7 +786,7 @@ div.toc ul ul {
 
 #hide-sidebar-btn {
   position: fixed;
-  display: none;
+  display: block;
   bottom: 0;
   right: 0;
   z-index: 99;

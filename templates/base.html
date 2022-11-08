@@ -4,20 +4,21 @@
 <head>
     {% block head %}
     <meta charset="utf-8" />
-    <meta name="generator" content=""Pelican" />
+    <meta name="generator" content="Pelican" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     {% if page_name == 'index' %}
     <meta name="description" content="{{ SITE_DESCRIPTION }}" />
     <meta name="keywords" content="{{ SITE_KEYWORKS }}" />
     <meta property="og:description" content="{{ SITE_DESCRIPTION }}" />
-    
     {% endif %}
+
     <title>{% block title %}{{ SITENAME }}{%endblock%}</title>
     <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/{{ CSS_FILE }}" />
     <link rel="shortcut icon" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/highlight/styles/base16/solarized-dark.min.css">
 
     {% block extra_head %}{% endblock extra_head %}
+
     {% endblock head %}
 </head>
 
@@ -26,13 +27,13 @@
     <header id="header" class="body">
     <div class="container">
         <h1 id="logo" class="logo px py"><a href="{{ SITEURL }}/">{{ SITENAME }}</a></h1>
-        {% if SITESUBTITLE %} <h2 class=" subtitle px pb">{{ SITESUBTITLE }}</h2>{%endif %}
+        {% if SITESUBTITLE %} <h2 class="subtitle px pb">{{ SITESUBTITLE }}</h2>{%endif %}
     </div>
 
     <nav>
         <ul class="nav-ul">
         {% for title, link in MENUITEMS %}
-            <li><a{% if page_name == 'index' %} class="is-active" {% endif %} href="{{ link }}">{{ title }}</a></li>
+            <li><a {% if page_name == 'index' %} class="is-active" {% endif %} href="{{ link }}">{{ title }}</a></li>
         {% endfor %}
 
         
@@ -49,10 +50,7 @@
         {% endif %}
         </ul>
     </nav>
-    </header><!-- /#banner -->
-    {% block content_title %}
-
-    {% endblock content_title %}
+    </header>
 
     <div id="main" class="main">
 
@@ -65,27 +63,28 @@
 
         {% endblock sidebar %}
         </aside>
-    </div> <!-- id=main -->
+    </div>
 
+    {% block extras %}
     <section id="extras" class="links">
     {% if LINKS %}
-    <div class="links-item">
-        <h2 class="link-title">{{ LINKS_WIDGET_NAME | default('友情链接') }}</h2>
-        <ul>
-        {% for name, link in LINKS %}
-        <li><a href="{{ link }}" target="_blank">{{ name }}</a></li>
-        {% endfor %}
-        </ul>
-    </div><!-- /.links-item -->
+        <div class="links-item">
+            <h2 class="link-title">{{ LINKS_WIDGET_NAME | default('友情链接') }}</h2>
+            <ul>
+            {% for name, link in LINKS %}
+                <li><a href="{{ link }}" target="_blank">{{ name }}</a></li>
+            {% endfor %}
+            </ul>
+        </div><!-- /.links-item -->
     {% endif %} <!-- LINKS END! -->
-    </section><!-- /#extras -->
+    </section>
+    {% endblock extras %}
 
     <footer id="footer">
-    <p>Copyright © 2022-present <a href="https://xiaotupo.com" target="_blank">小土坡</a> Powered by <a
+        <p>Copyright © 2022-present <a href="https://xiaotupo.com" target="_blank">小土坡</a> Powered by <a
         href="https://getpelican.com/" target="_blank">Pelican</a> | <a href="https://www.python.org/"
         target="_blank">Python</a> | <a href="{{ SITEURL }}/sitemap.xml" target="_blank">sitemap</a></p>
-
-    </footer><!-- /#footer -->
+    </footer>
 
     <!-- 隐藏侧栏 -->
     <button type="button" onclick="hideSidebarFunction()" id="hide-sidebar-btn">隐藏侧栏</button>
@@ -97,10 +96,9 @@
     <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/highlight/highlight.min.js"></script>
     <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/highlightjs-line-numbers.min.js"></script>
     <script>
-    hljs.highlightAll();
-    hljs.initLineNumbersOnLoad();
+        hljs.highlightAll();
+        hljs.initLineNumbersOnLoad();
     </script>
-
     
 </body>
 

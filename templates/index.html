@@ -9,7 +9,7 @@
             <article class="entry">
                 <div class="entry-body">
                     <h2 class="title"><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h2>
-                    {{ article.content|safe | truncate(100, true) }}
+                    {{ article.content|striptags|truncate(100, true) }}
                 </div>
                 <div class="article-tags">
                 {% include "taglist.html" %}
