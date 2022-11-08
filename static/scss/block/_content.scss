@@ -139,8 +139,12 @@
         p {
             font-size: 1.1rem;
             margin-top: 1rem;
-            margin-bottom: 2rem;
+            margin-bottom: 1rem;
             line-height: 180%;
+
+            a {
+                word-break: break-all;
+            }
         }
 
         h2 {
@@ -170,11 +174,25 @@
             padding-left: 5px;
             padding-right: 5px;
             font-size: 1rem;
-            background-color: pink;
+            background-color: #07A081;
+            color: white;
             border-radius: 5px;
-            border: 1px solid #ccc;
             margin: auto 3px;
             line-height: 135%;
+        }
+
+        ul {
+            list-style: square;
+        }
+
+        ol {
+            list-style: decimal;
+        }
+
+        blockquote {
+            border-left: 4px solid #07A081;
+            padding-left: 12px;
+            margin-left: 12px;
         }
 
 

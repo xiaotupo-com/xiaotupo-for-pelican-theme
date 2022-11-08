@@ -13,13 +13,14 @@ div.toc {
     /* ul ------------------*/
     ul {
         display: block;
-        list-style: decimal;
+        list-style: decimal !important;
         padding-inline-start: 25px;
         li {
             display: list-item;
 
             a {
                 padding: 10px 0;
+                padding-right: 20px;
             }
         }
 

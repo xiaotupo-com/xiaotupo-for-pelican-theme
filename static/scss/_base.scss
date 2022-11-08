@@ -22,7 +22,8 @@ a,a:hover {
 a {
     color: $link-color;
     &:hover {
-        color: $nav-bg;
+        // color: $nav-bg;
+        text-decoration: underline;
     }
 }
 

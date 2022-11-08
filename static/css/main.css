@@ -244,7 +244,7 @@ a {
   color: #1BA6B2;
 }
 a:hover {
-  color: #A3C159;
+  text-decoration: underline;
 }
 
 ::selection {
@@ -450,8 +450,12 @@ nav ul a:hover {
 #page .content p {
   font-size: 1.1rem;
   margin-top: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   line-height: 180%;
+}
+.article .content p a,
+#page .content p a {
+  word-break: break-all;
 }
 .article .content h2,
 #page .content h2 {
@@ -484,11 +488,25 @@ nav ul a:hover {
   padding-left: 5px;
   padding-right: 5px;
   font-size: 1rem;
-  background-color: pink;
+  background-color: #07A081;
+  color: white;
   border-radius: 5px;
-  border: 1px solid #ccc;
   margin: auto 3px;
   line-height: 135%;
+}
+.article .content ul,
+#page .content ul {
+  list-style: square;
+}
+.article .content ol,
+#page .content ol {
+  list-style: decimal;
+}
+.article .content blockquote,
+#page .content blockquote {
+  border-left: 4px solid #07A081;
+  padding-left: 12px;
+  margin-left: 12px;
 }
 .article .original,
 #page .original {
@@ -679,7 +697,7 @@ div.toc {
 }
 div.toc ul {
   display: block;
-  list-style: decimal;
+  list-style: decimal !important;
   padding-inline-start: 25px;
 }
 div.toc ul li {
@@ -687,6 +705,7 @@ div.toc ul li {
 }
 div.toc ul li a {
   padding: 10px 0;
+  padding-right: 20px;
 }
 div.toc ul ul {
   padding-inline-start: 10px;
@@ -797,6 +816,7 @@ div.toc ul ul {
 }
 
 .content > table {
+  width: 100%;
   background: #f7f7f7;
   table-layout: fixed;
   border-collapse: collapse;
@@ -806,6 +826,9 @@ div.toc ul ul {
 .content > table th {
   border: 1px solid rgb(190, 190, 190);
   padding: 10px 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 #page .title {
