@@ -1,11 +1,18 @@
 
+// width 小于 576 时,侧栏显示到下面
 @media (min-width: $sm) or (max-width: $sm) {
 	#header, #main, #extras {
 		width: 96%;
 	}
 
+	#main {
+		flex-direction: column;
+	}
+
 	#sidebar {
-		display: none;
+		display: block;
+		width: 100%;
+		margin: 0;
 	}
 
 
@@ -13,25 +20,10 @@
 		font-size: 0.8rem;
 	}
 
-	
-}
-
-
-@media (max-width: $md) {
-	.original .content {
-		width: 85% !important;
+	#content {
+		width: 100%;
 	}
 
-	
-}
-
-@media (max-width: $lg) {
-	#hide-sidebar-btn {
-		display: none !important;
-	}
-}
-
-@media (max-width: $sm) {
 	.original .content {
 		width: 95% !important;
 
@@ -39,52 +31,45 @@
 			font-size: 0.8rem !important;
 		}
 	}
+
+	.toc {
+		display: none !important;
+	}
+	
 }
 
-@media (min-width: $md) {
+@media (min-width: $lg) {
+
 	#header, #main, #extras {
-		width: $md;
+		width: $lg;
 	}
+
+	#main {
+		flex-direction: row;
+	}
+
+	#content {
+		width: calc(100% - 350px);
+	}
+
+	// 显示侧栏
 	#sidebar {
-		display: none;
+		display: block;
+		width: 350px;
 	}
 
 	#footer p {
 		font-size: 1rem;
 	}
-}
 
-@media (min-width: $lg) {
-	#header, #main, #extras {
-		width: $lg;
-	}
-
-	#sidebar {
-		display: block;
-	}
-
-	#footer p {
-		font-size: 1.2rem;
+	.toc {
+		display: block !important;
 	}
 }
 
 @media (min-width: $xl) {
 	#header, #main, #extras {
 		width: $xl;
-	}
-
-	#sidebar {
-		display: block;
-	}
-
-	#footer p {
-		font-size: 1.5rem;
-	}
-}
-
-@media (min-width: $xxl) {
-	#header, #main, #extras {
-		width: $xxl;
 	}
 
 	#sidebar {

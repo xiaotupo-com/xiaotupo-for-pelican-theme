@@ -16,11 +16,11 @@ var taglist = document.querySelectorAll(".article-tags a");
 taglist.forEach((a) => {
     a.style.background = getColor();
 
-    a.addEventListener("mouseover", ()=> {
+    a.addEventListener("mouseover", () => {
         a.style.filter = `drop-shadow(0 0 10px ${a.style.background})`;
     });
 
-    a.addEventListener("mouseout", ()=>{
+    a.addEventListener("mouseout", () => {
         a.style.filter = "none";
     });
 });
@@ -32,11 +32,11 @@ var sidebar_tag = document.querySelectorAll(".tags a");
 sidebar_tag.forEach((a) => {
     a.style.background = getColor();
 
-    a.addEventListener("mouseover", ()=> {
+    a.addEventListener("mouseover", () => {
         a.style.filter = `drop-shadow(0 0 10px ${a.style.background})`;
     });
 
-    a.addEventListener("mouseout", ()=>{
+    a.addEventListener("mouseout", () => {
         a.style.filter = "none";
     });
 });
@@ -59,22 +59,61 @@ function hideSidebarFunction() {
     }
 }
 
+// window.onload = function () {
+//     // body 宽度小于 576 时隐藏隐藏按钮
+//     if (document.body.clientWidth < 576) {
+//         hide_sidebar_btn.style.display = "none";
+//         hide_sidebar_btn.innerHTML = "显示侧栏";
+//         hide_sidebar.style = "";
+//     }
 
+//     // body 宽度大于 576 并且小于 780 时显示隐藏按钮
+//     if (document.body.clientWidth > 576) {
+//         hide_sidebar_btn.style.display = "block";
+//         hide_sidebar_btn.innerHTML = "显示侧栏";
+//     }
+
+//     // body 宽度大于 576 且小于 780 时隐藏侧栏
+//     if (document.body.clientWidth > 570 && document.body.clientWidth < 780) {
+//         hide_sidebar.style.display = "none";
+//         hide_sidebar_btn.innerHTML = "显示侧栏";
+//     }
+
+//     if (document.body.clientWidth > 780) {
+//         hide_sidebar_btn.innerHTML = "隐藏侧栏";
+//         hide_sidebar.style.display = "block";
+//     }
+// };
 
 /**
  * 屏幕宽度代码
  */
-window.onresize = function(){
-    if(document.body.clientWidth < 992) {
-        hide_sidebar_btn.style.display = "none";
-        hide_sidebar_btn.innerHTML = "隐藏侧栏";
-        hide_sidebar.style = "";
-    }
+// window.onresize = function () {
 
-    if(document.body.clientWidth > 992) {
-        hide_sidebar_btn.style.display = "block";
-    }
-}
+//     // body 宽度小于 576 时隐藏隐藏按钮
+//     if (document.body.clientWidth < 576) {
+//         hide_sidebar_btn.style.display = "none";
+//         hide_sidebar_btn.innerHTML = "显示侧栏";
+//         hide_sidebar.style = "";
+//     }
+
+//     // body 宽度大于 576 并且小于 780 时显示隐藏按钮
+//     if (document.body.clientWidth > 576) {
+//         hide_sidebar_btn.style.display = "block";
+//         hide_sidebar_btn.innerHTML = "显示侧栏";
+//     }
+
+//     // body 宽度大于 576 且小于 780 时隐藏侧栏
+//     if (document.body.clientWidth > 570 && document.body.clientWidth < 780) {
+//         hide_sidebar.style.display = "none";
+//         hide_sidebar_btn.innerHTML = "显示侧栏";
+//     }
+
+//     if (document.body.clientWidth > 780) {
+//         hide_sidebar_btn.innerHTML = "隐藏侧栏";
+//         hide_sidebar.style.display = "block";
+//     }
+// };
 
 
 /**
