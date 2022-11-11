@@ -38,6 +38,8 @@
     {% include 'article_infos.html' %}
     <div class="content">
         {{ article.content|safe }}
+
+        <p>到这里本文就完了，[{{SITENAME}}] 欢迎您再来！</p>
     </div><!-- /.entry-content -->
 
     {% if article.original != "false" %}
