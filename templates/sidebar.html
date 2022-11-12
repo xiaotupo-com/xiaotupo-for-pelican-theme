@@ -6,12 +6,19 @@
         
     </div>
     <div class="content">
-        <div class="bottom">
+        <div class="site-info">
             文章：<span>{{ articles|length }}</span>
             分类：<span>{{ categories|length }}</span>
             页面：<span>{{ pages|length }}</span>
         </div>
-        <a class="github-link" href="{{ GITHUB_URL }}" target="_blank" title="去我的 Github">Github</a>
+        <div class="link-wrap github">
+            <img class="img" src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/icons/github-fill.svg" alt="哔哩哔哩">
+            <a class="github-link" href="{{ GITHUB_URL }}" target="_blank" title="去我的 Github">Github</a>
+        </div>
+        <div class="link-wrap bilibili">
+            <img class="img" src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/icons/bilibili.svg" alt="哔哩哔哩">
+            <a class="bilibili-link" href="BILIBILI_URL" target="_blank" title="去我的哔哩哔哩 - _小土坡">哔哩哔哩</a>
+        </div>
     </div>
     
 </div>

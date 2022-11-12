@@ -19,33 +19,71 @@
 		}
 
 		.content {
+			display: flex;
+			flex-direction: column;
 
-			.github-link {
-				display: block;
-				background: black;
-				padding: 8px 0;
-				color: white;
-				font-size: 1.4rem;
-				font-weight: 800;
+			.link-wrap {
+				display: flex;
+				height: 48px;
+				padding-left: 18px;
+				.img {
+					display: block;
+					width: 1.5rem;
+					margin-right: 10px;
+				}
+			}
+
+			.github {
+				background-color: #edf1e4;
 
 				&:hover {
-					filter: drop-shadow(0 0 16px black);
-					font-size: 1.2rem;
-					font-weight: bold;
+					box-shadow: 5px 5px 5px #ccd1bf;
+					margin-bottom: 5px;
+					background-color: #f4fbe5;
 				}
+				
+			}
+
+			.bilibili {
+				background-color: #f1d8df;
+				
+				&:hover {
+					box-shadow: 5px 5px 5px #f1d8df;
+					background-color: #fbe9ee;
+				}
+			}
+
+			.github-link {
+				padding: 8px 0;
+				color: #645f5f;
+				font-size: 1.4rem;
+				font-weight: 800;
+			}
+
+			.bilibili-link {
+				
+				padding: 8px 0;
+				color: #3eb7df;
+				font-size: 1.4rem;
+				letter-spacing: 0.25rem;
+				font-weight: 800;
+				font-family: "Trebuchet MS", Arial, "Lucida Grande", Verdana, Lucida, Helvetica, sans-serif;
 			}
 
 			text-align: center;
 
-			.bottom {
+			.site-info {
 				background: #1BA6B2;
 				padding: 10px 0;
 				color: white;
+				height: 48px;
+				font-size: 1.15rem;
 
 				&:hover {
-					filter: drop-shadow(0 0 10px #1BA6B2);
-					font-size: 1.2rem;
-					font-weight: bold;
+					// filter: drop-shadow(0 0 10px #1BA6B2);
+					box-shadow: 5px 5px 5px #b2dee2;
+					margin-bottom: 5px;
+					
 				}
 
 				span {

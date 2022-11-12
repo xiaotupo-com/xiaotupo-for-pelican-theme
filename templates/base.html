@@ -33,7 +33,7 @@
     <nav>
         <ul class="nav-ul">
         {% for title, link in MENUITEMS %}
-            <li><a {% if page_name == 'index' %} class="is-active" {% endif %} href="{{ link }}">{{ title }}</a></li>
+            <li><a {% if page_name == 'index' and title == "首页" %} class="is-active" {% endif %} href="{{ link }}" target="_blank">{{ title }}</a></li>
         {% endfor %}
 
         
