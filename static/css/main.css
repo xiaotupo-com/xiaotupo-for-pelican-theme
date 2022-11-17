@@ -340,7 +340,6 @@ nav ul a:hover {
 #content {
   flex: 1 1 auto;
   width: calc(100% - 362px);
-  background: #f3efd3;
 }
 #content section {
   background: rgb(244, 244, 231);
@@ -373,6 +372,9 @@ nav ul a:hover {
   margin: 12px 0;
   color: #454e56;
   font-weight: 600;
+}
+#content .article-tags {
+  margin-top: 12px;
 }
 #content .article-tags a {
   color: white;
@@ -808,6 +810,11 @@ div.toc ul ul {
 
 .hljs-ln-code {
   padding-left: 12px !important;
+}
+
+code {
+  font-family: Consolas, Monaco, monospace !important;
+  font-weight: 600;
 }
 
 @media (min-width: 576px) or (max-width: 576px) {

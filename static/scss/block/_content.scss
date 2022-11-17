@@ -1,7 +1,6 @@
 #content {
     flex: 1 1 auto;
     width: calc(100% - 362px);
-    background: #f3efd3;
 
     section {
         background: rgb(244, 244, 231);
@@ -44,14 +43,13 @@
     }
 
     .article-tags {
-
+        margin-top: 12px;
         a {
             color: white;
             padding: 4px 8px;
             border-radius: 0.15rem;
             font-weight: 700;
             transition: all .3s ease;
-
         }
     }
 
