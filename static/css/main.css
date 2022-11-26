@@ -499,6 +499,9 @@ nav ul a:hover {
 .article .content ul,
 #page .content ul {
   list-style: square;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
 }
 .article .content ol,
 #page .content ol {
@@ -730,6 +733,8 @@ div.toc ul {
   display: block;
   list-style: decimal !important;
   padding-inline-start: 25px;
+  margin: 0 !important;
+  font-size: 1rem !important;
 }
 div.toc ul li {
   display: list-item;

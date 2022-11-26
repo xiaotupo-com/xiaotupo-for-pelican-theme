@@ -17,6 +17,4 @@
         {% endif %}
 <span>分类: <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a></span>
 <span>标签: {% include 'taglist.html' %}</span>
-{% import 'translations.html' as translations with context %}
-{{ translations.translations_for(article) }}
 </div><!-- /.post-info -->
