@@ -416,7 +416,6 @@ nav ul a:hover {
   padding-left: 4px;
   font-size: 1rem;
   color: #567;
-  border-left: 5px solid #b6bfb6;
   margin-bottom: 12px;
   margin-left: 12px;
   margin-right: 12px;
@@ -496,8 +495,9 @@ nav ul a:hover {
   margin: auto 3px;
   line-height: 135%;
 }
-.article .content ul,
-#page .content ul {
+.article .content ul, .article .content ol,
+#page .content ul,
+#page .content ol {
   list-style: square;
   margin-top: 1rem;
   margin-bottom: 1rem;

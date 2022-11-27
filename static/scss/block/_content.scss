@@ -99,7 +99,7 @@
     padding-left: 4px;
     font-size: 1rem;
     color: #567;
-    border-left: 5px solid #b6bfb6;
+    // border-left: 5px solid #b6bfb6;
     margin-bottom: 12px;
     margin-left: 12px;
     margin-right: 12px;
@@ -179,7 +179,7 @@
             line-height: 135%;
         }
 
-        ul {
+        ul,ol {
             list-style: square;
             margin-top: 1rem;
             margin-bottom: 1rem;

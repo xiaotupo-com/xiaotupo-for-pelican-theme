@@ -2,11 +2,11 @@
 <html lang="{% block html_lang %}{{ DEFAULT_LANG }}{% endblock html_lang %}">
 
 <head>
-    {% block head %}
     <meta charset="utf-8">
     <meta name="generator" content="Pelican">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block head %}
+    
     {% if page_name == 'index' %}
     <meta name="description" content="{{ SITE_DESCRIPTION }}">
     <meta name="keywords" content="{{ SITE_KEYWORKS }}">
