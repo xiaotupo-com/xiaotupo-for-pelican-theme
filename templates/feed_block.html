@@ -1,0 +1,9 @@
+{% if SOCIAL or FEED_ALL_ATOM or FEED_ALL_RSS %}
+    <div class="social">
+        {% if FEED_ATOM %}
+        <a href="{{ FEED_DOMAIN }}/{% if FEED_ATOM_URL %}{{ FEED_ATOM_URL }}{% else %}{{ FEED_ATOM }}{% endif %}" type="application/atom+xml" rel="alternate" title="订阅 Feed">
+            <img alt="feed" src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/feed4.png" />
+        </a>
+        {% endif %}
+    </div><!-- /.social -->
+{% endif %}

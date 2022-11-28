@@ -433,8 +433,6 @@ nav ul a:hover {
   padding: 18px 4px;
 }
 .article .title,
-.article .title,
-#page .title,
 #page .title {
   font-family: "Trebuchet MS", Arial, "Lucida Grande", Verdana, Lucida, Helvetica, sans-serif;
   line-height: 250%;
@@ -635,7 +633,7 @@ nav ul a:hover {
   letter-spacing: 0.15rem;
 }
 #sidebar .sidebar-item .content {
-  min-height: 100px;
+  min-height: 40px;
 }
 #sidebar .tags .content {
   display: flex;
@@ -779,7 +777,6 @@ div.toc ul ul {
 }
 
 .content > table {
-  width: 100%;
   background: #f7f7f7;
   table-layout: fixed;
   border-collapse: collapse;
@@ -791,7 +788,6 @@ div.toc ul ul {
   padding: 10px 15px;
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
 }
 
 #page .title {

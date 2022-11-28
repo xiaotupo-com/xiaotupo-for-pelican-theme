@@ -6,7 +6,7 @@
     <meta name="generator" content="Pelican">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% block head %}
-    
+
     {% if page_name == 'index' %}
     <meta name="description" content="{{ SITE_DESCRIPTION }}">
     <meta name="keywords" content="{{ SITE_KEYWORKS }}">
@@ -17,98 +17,111 @@
     <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/{{ CSS_FILE }}" />
     <link rel="shortcut icon" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/highlight/styles/base16/google-light.min.css">
+    <link rel="start" href="https://xiaotupo.com/blog/" title="Home">
+    <link rel="alternate" type="application/atom+xml" title="Recent Entries"
+        href="https://feeds.feedburner.com/xiaotupo">
 
     {% block extra_head %}{% endblock extra_head %}
 
     {% endblock head %}
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-07NG2CQS19"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-07NG2CQS19');
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?fb7b6b8fe7074e9f4e4c164fb2e2b56b";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
     </script>
 </head>
 
 <body>
     {% include 'github.html' %}
     <header id="header" class="body">
-    <div class="container">
-        <h1 id="logo" class="logo px py"><a href="{{ SITEURL }}/">{{ SITENAME }}</a></h1>
-        {% if SITESUBTITLE %} <h2 class="subtitle px pb">{{ SITESUBTITLE }}</h2>{%endif %}
-    </div>
+        <div class="container">
+            <h1 id="logo" class="logo px py"><a href="{{ SITEURL }}/">{{ SITENAME }}</a></h1>
+            {% if SITESUBTITLE %} <h2 class="subtitle px pb">{{ SITESUBTITLE }}</h2>{%endif %}
+        </div>
 
-    <nav>
-        <ul class="nav-ul">
-        {% for title, link in MENUITEMS %}
-            <li><a {% if page_name == 'index' and title == "首页" %} class="is-active" {% endif %} href="{{ link }}" >{{ title }}</a></li>
-        {% endfor %}
+        <nav>
+            <ul class="nav-ul">
+                {% for title, link in MENUITEMS %}
+                <li><a {% if page_name=='index' and title=="首页" %} class="is-active" {% endif %} href="{{ link }}">{{
+                        title }}</a></li>
+                {% endfor %}
 
-        
-        {% if DISPLAY_CATEGORIES_ON_MENU -%}
-            {% for cat, null in categories %}
-                <li><a{% if cat==category %} class="is-active" {% endif %} href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
-            {% endfor %}
-        {% endif %}
 
-        {% if DISPLAY_PAGES_ON_MENU -%}
-            {% for pg in pages %}
-                <li><a{% if pg==page %} class="is-active" {% endif %} href="{{ SITEURL }}/{{ pg.url }}">{{ pg.title }}</a></li>
-            {% endfor %}
-        {% endif %}
-        </ul>
-    </nav>
+                {% if DISPLAY_CATEGORIES_ON_MENU -%}
+                {% for cat, null in categories %}
+                <li>
+                    <a{% if cat==category %} class="is-active" {% endif %} href="{{ SITEURL }}/{{ cat.url }}">{{ cat
+                        }}</a>
+                </li>
+                {% endfor %}
+                {% endif %}
+
+                {% if DISPLAY_PAGES_ON_MENU -%}
+                {% for pg in pages %}
+                <li>
+                    <a{% if pg==page %} class="is-active" {% endif %} href="{{ SITEURL }}/{{ pg.url }}">{{ pg.title
+                        }}</a>
+                </li>
+                {% endfor %}
+                {% endif %}
+            </ul>
+        </nav>
     </header>
 
     <div id="main" class="main">
 
         <section id="content">
-        {% block content %}
-        {% endblock content %}
+            {% block content %}
+            {% endblock content %}
         </section>
         <aside id="sidebar">
-        {% block sidebar %}
+            {% block sidebar %}
 
-        {% endblock sidebar %}
+            {% endblock sidebar %}
         </aside>
     </div>
 
     {% block extras %}
     <section id="extras" class="links">
-    {% if LINKS %}
+        {% if LINKS %}
         <div class="links-item">
             <h2 class="link-title">{{ LINKS_WIDGET_NAME | default('友情链接') }}</h2>
             <ul>
-            {% for name, link in LINKS %}
+                {% for name, link in LINKS %}
                 <li><a href="{{ link }}" target="_blank">{{ name }}</a></li>
-            {% endfor %}
+                {% endfor %}
             </ul>
         </div><!-- /.links-item -->
-    {% endif %} <!-- LINKS END! -->
+        {% endif %}
+        <!-- LINKS END! -->
     </section>
     {% endblock extras %}
 
+
+
     <footer id="footer">
         <p>Copyright © 2022-present <a href="https://xiaotupo.com" target="_blank">小土坡</a> Powered by <a
-        href="https://getpelican.com/" target="_blank">Pelican</a> | <a href="https://www.python.org/"
-        target="_blank">Python</a> | <a href="{{ SITEURL }}/sitemap.xml" target="_blank">sitemap</a></p>
+                href="https://getpelican.com/" target="_blank">Pelican</a> | <a href="https://www.python.org/"
+                target="_blank">Python</a> | <a href="{{ SITEURL }}/sitemap.xml" target="_blank">sitemap</a></p>
     </footer>
 
 
     <!-- 返回顶部 -->
     <button type="button" onclick="topFunction()" id="go-top">Top</button>
 
-    <script type="text/javascript"  src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/main.js"></script>
+    <script type="text/javascript" src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/main.js"></script>
     <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/highlight/highlight.min.js"></script>
     <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/highlightjs-line-numbers.min.js"></script>
     <script>
         hljs.highlightAll();
         hljs.initLineNumbersOnLoad();
     </script>
-    
+
 </body>
 
 </html>
