@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block html_lang %}{{ page.lang }}{% endblock %}
-{% block title %}{{ page.title|safe }}{% endblock %}
+{% block title %}{{ page.title|safe }} - {{ SITENAME }}{% endblock %}
 
 {% block head -%}
 {{ super() -}}

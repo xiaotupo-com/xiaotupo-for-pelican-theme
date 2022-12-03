@@ -1,7 +1,7 @@
 #content {
     flex: 1 1 auto;
     width: calc(100% - 362px);
-
+    background: white;
     section {
         background: rgb(244, 244, 231);
         margin-bottom: $mb-4;
@@ -12,7 +12,7 @@
         display: flex;
         flex-direction: column;
         margin-bottom: 1.5rem;
-        background: $entry-bg;
+        // background: $entry-bg;
         border-radius: 0.25rem;
         padding: 19px;
         min-height: 100px;
@@ -137,7 +137,7 @@
             font-size: 1.1rem;
             margin-top: 1rem;
             margin-bottom: 1rem;
-            line-height: 180%;
+            line-height: 155%;
 
             a {
                 word-break: break-all;
@@ -163,6 +163,11 @@
             color: #000000;
             border-bottom: 1px solid #d3d3d3;
             font-weight: 500;
+            // background-color: #b0c4de;
+            margin-left: -16px;
+            margin-right: -16px;
+            padding-left: 16px;
+            border-left: 8px solid #0080ff;
         }
 
         >table code,
@@ -236,3 +241,8 @@
 }
 
 // .article, #page
+
+.giscus {
+    padding-left: 16px;
+    padding-right: 16px;
+}

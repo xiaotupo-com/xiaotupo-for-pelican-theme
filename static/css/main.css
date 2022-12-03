@@ -261,7 +261,7 @@ a:hover {
 }
 
 body {
-  background: #fdf6e3;
+  background: #efefef;
   display: flex;
   font-size: 14px;
   font-family: Oxygen, Ubuntu, Cantarell, PingFangSC-light, PingFangTC-light, "Open Sans", "Helvetica Neue", "sans-serif";
@@ -340,6 +340,7 @@ nav ul a:hover {
 #content {
   flex: 1 1 auto;
   width: calc(100% - 362px);
+  background: white;
 }
 #content section {
   background: rgb(244, 244, 231);
@@ -350,7 +351,6 @@ nav ul a:hover {
   display: flex;
   flex-direction: column;
   margin-bottom: 1.5rem;
-  background: #ebe9e1;
   border-radius: 0.25rem;
   padding: 19px;
   min-height: 100px;
@@ -450,7 +450,7 @@ nav ul a:hover {
   font-size: 1.1rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
-  line-height: 180%;
+  line-height: 155%;
 }
 .article .content p a,
 #page .content p a {
@@ -478,6 +478,10 @@ nav ul a:hover {
   color: #000000;
   border-bottom: 1px solid #d3d3d3;
   font-weight: 500;
+  margin-left: -16px;
+  margin-right: -16px;
+  padding-left: 16px;
+  border-left: 8px solid #0080ff;
 }
 .article .content > table code,
 .article .content p code,
@@ -548,6 +552,11 @@ nav ul a:hover {
   color: #999;
 }
 
+.giscus {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
 #sidebar {
   width: 350px;
   min-width: 350px;
@@ -576,20 +585,15 @@ nav ul a:hover {
   width: 1.5rem;
   margin-right: 10px;
 }
-#sidebar .profile .content .github {
+#sidebar .profile .content .github,
+#sidebar .profile .content .bilibili {
   background-color: #edf1e4;
 }
-#sidebar .profile .content .github:hover {
+#sidebar .profile .content .github:hover,
+#sidebar .profile .content .bilibili:hover {
   box-shadow: 5px 5px 5px #ccd1bf;
   margin-bottom: 5px;
   background-color: #f4fbe5;
-}
-#sidebar .profile .content .bilibili {
-  background-color: #f1d8df;
-}
-#sidebar .profile .content .bilibili:hover {
-  box-shadow: 5px 5px 5px #f1d8df;
-  background-color: #fbe9ee;
 }
 #sidebar .profile .content .github-link {
   padding: 8px 0;
@@ -599,7 +603,7 @@ nav ul a:hover {
 }
 #sidebar .profile .content .bilibili-link {
   padding: 8px 0;
-  color: #3eb7df;
+  color: #645f5f;
   font-size: 1.4rem;
   letter-spacing: 0.25rem;
   font-weight: 800;
@@ -638,20 +642,18 @@ nav ul a:hover {
 #sidebar .tags .content {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  column-gap: 8px;
 }
 #sidebar .tags .content .tag {
-  color: rgba(255, 255, 255, 0.7019607843);
+  color: rgba(255, 255, 255, 0.9764705882);
   display: inline-block;
-  padding: 6px 10px;
+  padding: 2px 8px;
   margin-bottom: 8px;
   border-radius: 8px;
   font-size: 1.1rem;
-  height: fit-content;
 }
 #sidebar .tags .content .tag:hover {
   color: white;
-  font-weight: bold;
 }
 #sidebar .category .content {
   display: flex;
@@ -801,7 +803,7 @@ div.toc ul ul {
   margin-bottom: 24px;
 }
 #link-list .link-item {
-  padding: 4px 8px;
+  padding: 4px 18px;
   font-size: 1.5rem;
   background: teal;
   color: white;

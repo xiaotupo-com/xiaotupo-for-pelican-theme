@@ -33,7 +33,8 @@
 				}
 			}
 
-			.github {
+			.github,
+			.bilibili {
 				background-color: #edf1e4;
 
 				&:hover {
@@ -44,14 +45,14 @@
 				
 			}
 
-			.bilibili {
-				background-color: #f1d8df;
+			// .bilibili {
+			// 	background-color: #f1d8df;
 				
-				&:hover {
-					box-shadow: 5px 5px 5px #f1d8df;
-					background-color: #fbe9ee;
-				}
-			}
+			// 	&:hover {
+			// 		box-shadow: 5px 5px 5px #f1d8df;
+			// 		background-color: #fbe9ee;
+			// 	}
+			// }
 
 			.github-link {
 				padding: 8px 0;
@@ -63,7 +64,8 @@
 			.bilibili-link {
 				
 				padding: 8px 0;
-				color: #3eb7df;
+				// color: #3eb7df;
+				color: #645f5f;
 				font-size: 1.4rem;
 				letter-spacing: 0.25rem;
 				font-weight: 800;
@@ -121,20 +123,18 @@
 		.content {
 			display: flex;
 			flex-wrap: wrap;
-			justify-content: space-around;
+			column-gap: 8px;
 
 			.tag {
-				color: #ffffffb3;
+				color: #fffffff9;
 				display: inline-block;
-				padding: 6px 10px;
+				padding: 2px 8px;
 				margin-bottom: 8px;
 				border-radius: 8px;
 				font-size: 1.1rem;
-				height: fit-content;
 
 				&:hover {
 					color: white;
-					font-weight: bold;
 				}
 			}
 		}
