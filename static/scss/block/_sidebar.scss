@@ -34,7 +34,8 @@
 			}
 
 			.github,
-			.bilibili {
+			.bilibili,
+			.juejin {
 				background-color: #edf1e4;
 
 				&:hover {
@@ -45,15 +46,6 @@
 				
 			}
 
-			// .bilibili {
-			// 	background-color: #f1d8df;
-				
-			// 	&:hover {
-			// 		box-shadow: 5px 5px 5px #f1d8df;
-			// 		background-color: #fbe9ee;
-			// 	}
-			// }
-
 			.github-link {
 				padding: 8px 0;
 				color: #645f5f;
@@ -61,7 +53,8 @@
 				font-weight: 800;
 			}
 
-			.bilibili-link {
+			.bilibili-link,
+			.juejin-link {
 				
 				padding: 8px 0;
 				// color: #3eb7df;

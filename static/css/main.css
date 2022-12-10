@@ -586,11 +586,13 @@ nav ul a:hover {
   margin-right: 10px;
 }
 #sidebar .profile .content .github,
-#sidebar .profile .content .bilibili {
+#sidebar .profile .content .bilibili,
+#sidebar .profile .content .juejin {
   background-color: #edf1e4;
 }
 #sidebar .profile .content .github:hover,
-#sidebar .profile .content .bilibili:hover {
+#sidebar .profile .content .bilibili:hover,
+#sidebar .profile .content .juejin:hover {
   box-shadow: 5px 5px 5px #ccd1bf;
   margin-bottom: 5px;
   background-color: #f4fbe5;
@@ -601,7 +603,8 @@ nav ul a:hover {
   font-size: 1.4rem;
   font-weight: 800;
 }
-#sidebar .profile .content .bilibili-link {
+#sidebar .profile .content .bilibili-link,
+#sidebar .profile .content .juejin-link {
   padding: 8px 0;
   color: #645f5f;
   font-size: 1.4rem;
@@ -820,9 +823,9 @@ code {
   font-weight: 600;
 }
 
-@media (min-width: 576px) or (max-width: 576px) {
+@media screen and (min-width: 576px), (max-width: 576px) {
   #header, #main, #extras {
-    width: 96%;
+    width: 100%;
   }
   #main {
     flex-direction: column;

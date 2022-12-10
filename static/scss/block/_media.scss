@@ -1,8 +1,8 @@
 
 // width 小于 576 时,侧栏显示到下面
-@media (min-width: $sm) or (max-width: $sm) {
+@media screen and (min-width: $sm), (max-width: $sm) {
 	#header, #main, #extras {
-		width: 96%;
+		width: 100%;
 	}
 
 	#main {
